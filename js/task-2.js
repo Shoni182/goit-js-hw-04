@@ -8,6 +8,7 @@ console.log("Завдання 2 Розрахунок калорій ");
 
  */
 // #endregion
+
 //?
 //?
 //?
@@ -16,10 +17,13 @@ console.log("Завдання 2 Розрахунок калорій ");
 function calcAverageCalories(days) {
   let avgCallories = 0;
 
-  for (const item of days) {
-    avgCallories += item.calories / days.length;
+  if (days.length === 0) {
+    return avgCallories;
   }
-  return avgCallories;
+  for (const item of days) {
+    avgCallories += item.calories;
+  }
+  return avgCallories / days.length;
 }
 
 console.log(
